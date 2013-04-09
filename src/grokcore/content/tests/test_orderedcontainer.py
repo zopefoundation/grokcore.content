@@ -65,6 +65,23 @@ Reordering with a wrong set of keys should fail::
   ...
   ValueError: Incompatible key set.
 
+Reordering will not corrupt the key-value mapping (there used to an edge case
+where it was possible to corrupt the mapping)::
+
+  >>> morebones = OrderedBones()
+  >>> morebones['thigh'] = Bone('Thigh Bone')
+  >>> morebones['knee'] = Bone('Knee Cap')
+  >>> morebones['shin'] = Bone('Shin Bone')
+  >>> morebones['ankle'] = Bone('Ankle Joint')
+  >>> # There used to be a bug where this new order would have been
+  >>> # accepted and thus would result in a corrupted _order listing
+  >>> # in the OrderedContainer instance.
+  >>> morebones.updateOrder(
+  ...     order=['ankle', 'shin', 'knee', 'thigh', 'ankle', 'shin'])
+  Traceback (most recent call last):
+  ...
+  ValueError: Incompatible key set.
+
 """
 
 from grokcore.content import Model, OrderedContainer

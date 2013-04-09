@@ -4,8 +4,9 @@ Changes
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Fix a bug where the OrderedContainer could get corrupted in case
+  updateOrder() would have been called with a list containing multiple
+  occurrences of a existing key in the mapping.
 
 1.1 (2010-11-01)
 ----------------

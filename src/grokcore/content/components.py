@@ -122,6 +122,11 @@ class OrderedContainer(Container):
         if set(order) != set(self._order):
             raise ValueError("Incompatible key set.")
 
+        if len(order) != len(self._order):
+            # Prevents multiple occurences of an existing key to be
+            # accepted as valid.
+            raise ValueError("Incompatible key set.")
+
         self._order = PersistentList()
         self._order.extend(order)
         notifyContainerModified(self)
