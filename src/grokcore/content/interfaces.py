@@ -16,6 +16,9 @@
 from grokcore.component.interfaces import IContext
 from zope.container.interfaces import IOrderedContainer
 from zope.container.interfaces import IContainer as IContainerBase
+from zope.lifecycleevent.interfaces import IObjectModifiedEvent
+from zope.lifecycleevent import ObjectModifiedEvent
+import zope.interface
 
 
 class IContainer(IContext, IContainerBase):
@@ -26,3 +29,12 @@ class IContainer(IContext, IContainerBase):
 class IOrderedContainer(IContainer, IOrderedContainer):
     """A Grok container that can be ordered.
     """
+
+
+class IObjectEditedEvent(IObjectModifiedEvent):
+    """One of the attributes of the object was modified.
+    """
+
+
+class ObjectEditedEvent(ObjectModifiedEvent):
+    zope.interface.implements(IObjectEditedEvent)
