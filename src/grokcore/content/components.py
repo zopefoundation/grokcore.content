@@ -95,10 +95,10 @@ class OrderedContainer(Container):
         return ((key, self[key]) for key in self._order)
 
     def __setitem__(self, key, object):
-        foo = self.has_key(key)
+        contains = self.has_key(key)
         # Then do whatever containers normally do.
         super(OrderedContainer, self).__setitem__(key, object)
-        if not foo:
+        if not contains:
             self._order.append(key)
 
     def __delitem__(self, key):
