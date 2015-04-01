@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.2 (unreleased)
+1.2 (2015-04-01)
 ----------------
 
 - Introduce ObjectEditedEvent which is meant to used when the
