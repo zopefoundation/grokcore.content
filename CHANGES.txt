@@ -4,7 +4,8 @@ Changes
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix updateOrder that would create a new PersistentList object in the
+  database each time the order is updated.
 
 
 1.2 (2015-04-01)

@@ -127,6 +127,5 @@ class OrderedContainer(Container):
             # accepted as valid.
             raise ValueError("Incompatible key set.")
 
-        self._order = PersistentList()
-        self._order.extend(order)
+        self._order[:] = list(order)
         notifyContainerModified(self)
