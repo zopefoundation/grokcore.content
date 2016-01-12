@@ -86,8 +86,10 @@ where it was possible to corrupt the mapping)::
 
 from grokcore.content import Model, OrderedContainer
 
+
 class OrderedBones(OrderedContainer):
     pass
+
 
 class Bone(Model):
     def __init__(self, name):
@@ -95,8 +97,7 @@ class Bone(Model):
 
 
 def test_suite():
-    from zope.testing import doctest
+    import doctest
     suite = doctest.DocTestSuite(
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS
-        )
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
     return suite

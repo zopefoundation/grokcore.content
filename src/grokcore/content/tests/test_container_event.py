@@ -29,12 +29,15 @@ from grokcore.component import subscribe
 from grokcore.content import Model, OrderedContainer
 from zope.container.interfaces import IContainerModifiedEvent
 
+
 class OrderedBones(OrderedContainer):
     pass
+
 
 class Bone(Model):
     def __init__(self, name):
         self.name = name
+
 
 @subscribe(OrderedBones, IContainerModifiedEvent)
 def container_changed(object, event):
@@ -42,14 +45,15 @@ def container_changed(object, event):
 
 
 def test_suite():
+    import doctest
     import zope.component.eventtesting
-    from zope.testing import doctest, cleanup
+    from zope.testing import cleanup
 
     def cleanUp(test):
         cleanup.cleanUp()
-    
+
     suite = doctest.DocTestSuite(
-        setUp=zope.component.eventtesting.setUp, tearDown=cleanUp,
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS
-        )
+        setUp=zope.component.eventtesting.setUp,
+        tearDown=cleanUp,
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
     return suite
