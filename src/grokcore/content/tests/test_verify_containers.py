@@ -37,9 +37,9 @@ Like the grokcore.content.Container, the OrderedContainer is an IContext::
 
 """
 
+
 def test_suite():
-    from zope.testing import doctest
+    import doctest
     suite = doctest.DocTestSuite(
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS
-        )
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
     return suite

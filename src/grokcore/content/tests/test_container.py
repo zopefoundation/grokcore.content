@@ -12,7 +12,7 @@ you can store a lot of items in a scalable way.
     >>> from zope.container.btree import BTreeContainer
     >>> isinstance(bag, BTreeContainer)
     True
-     
+
 We had problems when switching to grokcore.content.Container
 with the __parent__ attribute being set, we better make sure
 this doesn't happen again:
@@ -32,17 +32,17 @@ this doesn't happen again:
 
 from grokcore.content import Model, Container
 
+
 class BoneBag(Container):
     pass
-    
+
+
 class Bone(Model):
     pass
 
 
-
 def test_suite():
-    from zope.testing import doctest
+    import doctest
     suite = doctest.DocTestSuite(
-        optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS
-        )
+        optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS)
     return suite
