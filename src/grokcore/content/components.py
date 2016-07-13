@@ -95,11 +95,11 @@ class OrderedContainer(Container):
         return ((key, self[key]) for key in self._order)
 
     def __setitem__(self, key, object):
-        contains = self.has_key(key)
-        # Then do whatever containers normally do.
+        # Do whatever containers normally do.
         super(OrderedContainer, self).__setitem__(key, object)
-        if not contains:
-            self._order.append(key)
+        # If the key was already in the container, a KeyError will be returned
+        # so we can safely add the key to self._order now.
+        self._order.append(key)
 
     def __delitem__(self, key):
         # First do whatever containers normally do.
