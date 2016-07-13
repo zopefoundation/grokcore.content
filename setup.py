@@ -34,6 +34,7 @@ setup(
     license='ZPL',
     install_requires=install_requires,
     tests_require=tests_require,
+    test_suite='grokcore.content.tests.collect_tests',
     extras_require={'test': tests_require},
     packages=find_packages('src'),
     package_dir={'': 'src'},

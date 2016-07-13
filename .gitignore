@@ -2,7 +2,12 @@
 __pycache__
 src/*.egg-info
 
+.coverage
+.coverage.*
 .installed.cfg
+.tox
 bin
+coverage.xml
 develop-eggs
+htmlcov/
 parts
