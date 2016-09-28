@@ -82,6 +82,10 @@ where it was possible to corrupt the mapping)::
   ...
   ValueError: Incompatible key set.
 
+The OrderedContainer is also an iterator which returns the keys:
+  >>> [ bone for bone in morebones]
+  ['thigh', 'knee', 'shin', 'ankle']
+
 """
 
 from grokcore.content import Model, OrderedContainer
