@@ -20,9 +20,10 @@ from persistent.list import PersistentList
 from zope.annotation.interfaces import IAttributeAnnotatable
 from zope.container.btree import BTreeContainer
 from zope.container.contained import Contained, notifyContainerModified
-from zope.interface import implements
+from zope.interface import implementer
 
 
+@implementer(IAttributeAnnotatable, interfaces.IContext)
 class Model(Contained, persistent.Persistent):
     # XXX Inheritance order is important here. If we reverse this,
     # then containers can't be models anymore because no unambigous MRO
@@ -41,9 +42,9 @@ class Model(Contained, persistent.Persistent):
     automatically be made the `grok.context()` of each of the views.
 
     """
-    implements(IAttributeAnnotatable, interfaces.IContext)
 
 
+@implementer(IAttributeAnnotatable, interfaces.IContainer)
 class Container(BTreeContainer):
     """The base class for containers in Grok applications.
 
@@ -62,9 +63,9 @@ class Container(BTreeContainer):
     or 'address') under which that item has been stored.
 
     """
-    implements(IAttributeAnnotatable, interfaces.IContainer)
 
 
+@implementer(interfaces.IOrderedContainer)
 class OrderedContainer(Container):
     """A Grok container that remembers the order of its items.
 
@@ -75,7 +76,6 @@ class OrderedContainer(Container):
     way of changing the order is to call the `updateOrder()` method.
 
     """
-    implements(interfaces.IOrderedContainer)
 
     def __init__(self):
         super(OrderedContainer, self).__init__()

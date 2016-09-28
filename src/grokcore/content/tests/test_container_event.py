@@ -41,7 +41,7 @@ class Bone(Model):
 
 @subscribe(OrderedBones, IContainerModifiedEvent)
 def container_changed(object, event):
-    print 'Container has changed!'
+    print('Container has changed!')
 
 
 def test_suite():

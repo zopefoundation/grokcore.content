@@ -15,12 +15,12 @@ install_requires = [
     'zope.container',
     'zope.interface',
     'zope.lifecycleevent',
-    ]
+]
 
 tests_require = [
     'zope.testing',
     'zope.component',
-    ]
+]
 
 setup(
     name='grokcore.content',
@@ -34,6 +34,7 @@ setup(
     license='ZPL',
     install_requires=install_requires,
     tests_require=tests_require,
+    test_suite='grokcore.content.tests.collect_tests',
     extras_require={'test': tests_require},
     packages=find_packages('src'),
     package_dir={'': 'src'},
@@ -45,5 +46,11 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Zope Public License',
         'Programming Language :: Python',
-        'Framework :: Zope3'],
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Framework :: Zope3'
+    ],
 )

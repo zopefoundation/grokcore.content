@@ -18,15 +18,20 @@ with the __parent__ attribute being set, we better make sure
 this doesn't happen again:
 
     >>> skull = Bone()
-    >>> print skull.__parent__
+    >>> print(skull.__parent__)
     None
-    >>> print skull.__name__
+    >>> print(skull.__name__)
     None
     >>> bag['skull'] = skull
     >>> skull.__parent__
     <grokcore.content.tests.test_container.BoneBag object at 0x...>
-    >>> skull.__name__
-    u'skull'
+    
+Note how we prefix the print output in order to have the ellipsis work as 
+the output for the __name__ is slightly different between python 2 and
+python 3.
+    
+    >>> 'skull name';skull.__name__
+    'skull name'...'skull'
 
 """
 

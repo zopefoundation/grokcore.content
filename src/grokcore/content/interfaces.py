@@ -36,5 +36,7 @@ class IObjectEditedEvent(IObjectModifiedEvent):
     """
 
 
+@zope.interface.implementer(IObjectEditedEvent)
 class ObjectEditedEvent(ObjectModifiedEvent):
-    zope.interface.implements(IObjectEditedEvent)
+    """One of the attributes of the object was edited.
+    """
