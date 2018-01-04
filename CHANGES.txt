@@ -1,8 +1,8 @@
 Changes
 =======
 
-1.4 (unreleased)
-----------------
+3.0.0 (2018-01-04)
+------------------
 
 - Use ``zope.interface.implementer`` decorator instead of
   ``zope.interface.implements`` with classes to support Python 3.
