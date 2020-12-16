@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-long_description = "%s\n%s\n" % (read('README.txt'), read('CHANGES.txt'))
 
+long_description = "%s\n%s\n" % (read('README.txt'), read('CHANGES.txt'))
 install_requires = [
     'setuptools',
     'persistent',
@@ -16,7 +16,6 @@ install_requires = [
     'zope.interface',
     'zope.lifecycleevent',
 ]
-
 tests_require = [
     'zope.testing',
     'zope.component',
@@ -24,7 +23,7 @@ tests_require = [
 
 setup(
     name='grokcore.content',
-    version='3.0.3.dev0',
+    version='3.1.0.dev0',
     author='Grok Team',
     author_email='grok-dev@zope.org',
     url='http://grok.zope.org',
@@ -44,13 +43,18 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
+        'Framework :: Zope :: 3',
         'License :: OSI Approved :: Zope Public License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Framework :: Zope :: 3'
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )

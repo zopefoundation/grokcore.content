@@ -86,7 +86,7 @@ The OrderedContainer is also an iterator which returns the keys:
   >>> [ bone for bone in morebones]
   ['thigh', 'knee', 'shin', 'ankle']
 
-"""
+"""  # noqa: E501 line too long
 
 from grokcore.content import Model, OrderedContainer
 
