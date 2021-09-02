@@ -17,8 +17,9 @@ install_requires = [
     'zope.lifecycleevent',
 ]
 tests_require = [
-    'zope.testing',
     'zope.component',
+    'zope.testing',
+    'zope.testrunner',
 ]
 
 setup(
