@@ -8,7 +8,7 @@ def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 
-long_description = "%s\n%s\n" % (read('README.txt'), read('CHANGES.txt'))
+long_description = "{}\n{}\n".format(read('README.txt'), read('CHANGES.txt'))
 install_requires = [
     'setuptools',
     'persistent',

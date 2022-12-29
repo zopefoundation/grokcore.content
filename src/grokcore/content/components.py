@@ -79,7 +79,7 @@ class OrderedContainer(Container):
     """
 
     def __init__(self):
-        super(OrderedContainer, self).__init__()
+        super().__init__()
         self._order = PersistentList()
 
     def keys(self):
@@ -97,14 +97,14 @@ class OrderedContainer(Container):
 
     def __setitem__(self, key, object):
         # Do whatever containers normally do.
-        super(OrderedContainer, self).__setitem__(key, object)
+        super().__setitem__(key, object)
         # If the key was already in the container, a KeyError will be returned
         # so we can safely add the key to self._order now.
         self._order.append(key)
 
     def __delitem__(self, key):
         # First do whatever containers normally do.
-        super(OrderedContainer, self).__delitem__(key)
+        super().__delitem__(key)
         self._order.remove(key)
 
     def updateOrder(self, order):
