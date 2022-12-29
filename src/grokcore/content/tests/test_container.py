@@ -35,7 +35,8 @@ python 3.
 
 """
 
-from grokcore.content import Model, Container
+from grokcore.content import Container
+from grokcore.content import Model
 
 
 class BoneBag(Container):

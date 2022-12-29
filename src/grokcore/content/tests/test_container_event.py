@@ -26,8 +26,10 @@ Delete an item::
 """
 
 from grokcore.component import subscribe
-from grokcore.content import Model, OrderedContainer
 from zope.container.interfaces import IContainerModifiedEvent
+
+from grokcore.content import Model
+from grokcore.content import OrderedContainer
 
 
 class OrderedBones(OrderedContainer):
@@ -46,6 +48,7 @@ def container_changed(object, event):
 
 def test_suite():
     import doctest
+
     import zope.component.eventtesting
     from zope.testing import cleanup
 

@@ -1,8 +1,13 @@
 from grokcore.component.interfaces import IContext
-from grokcore.content.interfaces import IContainer, IOrderedContainer
-from grokcore.content.interfaces import IObjectEditedEvent, ObjectEditedEvent
-from grokcore.content.components import Model, Container, OrderedContainer
-from zope.container.interfaces import IContainerModifiedEvent
 from zope.container.contained import ContainerModifiedEvent
-from zope.lifecycleevent.interfaces import IObjectModifiedEvent
+from zope.container.interfaces import IContainerModifiedEvent
 from zope.lifecycleevent import ObjectModifiedEvent
+from zope.lifecycleevent.interfaces import IObjectModifiedEvent
+
+from grokcore.content.components import Container
+from grokcore.content.components import Model
+from grokcore.content.components import OrderedContainer
+from grokcore.content.interfaces import IContainer
+from grokcore.content.interfaces import IObjectEditedEvent
+from grokcore.content.interfaces import IOrderedContainer
+from grokcore.content.interfaces import ObjectEditedEvent
