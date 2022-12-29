@@ -14,13 +14,14 @@
 """Base content components for Grok.
 """
 import persistent
-
-from grokcore.content import interfaces
 from persistent.list import PersistentList
 from zope.annotation.interfaces import IAttributeAnnotatable
 from zope.container.btree import BTreeContainer
-from zope.container.contained import Contained, notifyContainerModified
+from zope.container.contained import Contained
+from zope.container.contained import notifyContainerModified
 from zope.interface import implementer
+
+from grokcore.content import interfaces
 
 
 @implementer(IAttributeAnnotatable, interfaces.IContext)

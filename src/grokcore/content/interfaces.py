@@ -13,12 +13,12 @@
 ##############################################################################
 """Specific content interfaces for Grok.
 """
-from grokcore.component.interfaces import IContext
-from zope.container.interfaces import IOrderedContainer
-from zope.container.interfaces import IContainer as IContainerBase
-from zope.lifecycleevent.interfaces import IObjectModifiedEvent
-from zope.lifecycleevent import ObjectModifiedEvent
 import zope.interface
+from grokcore.component.interfaces import IContext
+from zope.container.interfaces import IContainer as IContainerBase
+from zope.container.interfaces import IOrderedContainer
+from zope.lifecycleevent import ObjectModifiedEvent
+from zope.lifecycleevent.interfaces import IObjectModifiedEvent
 
 
 class IContainer(IContext, IContainerBase):

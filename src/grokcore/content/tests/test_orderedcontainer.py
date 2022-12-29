@@ -88,7 +88,8 @@ The OrderedContainer is also an iterator which returns the keys:
 
 """  # noqa: E501 line too long
 
-from grokcore.content import Model, OrderedContainer
+from grokcore.content import Model
+from grokcore.content import OrderedContainer
 
 
 class OrderedBones(OrderedContainer):
