@@ -1,7 +1,7 @@
 Changes
 =======
 
-4.1 (unreleased)
+4.1 (2023-08-28)
 ----------------
 
 - Drop support for deprecated ``python setup.py test``.
