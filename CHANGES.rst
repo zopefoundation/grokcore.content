@@ -4,7 +4,7 @@ Changes
 4.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Drop support for deprecated ``python setup.py test``.
 
 
 4.0 (2023-08-28)
