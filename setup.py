@@ -1,6 +1,5 @@
 import os
 
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -22,7 +21,7 @@ install_requires = [
 tests_require = [
     'zope.component',
     'zope.testing',
-    'zope.testrunner',
+    'zope.testrunner >= 6.4',
 ]
 
 setup(
@@ -38,9 +37,6 @@ setup(
     python_requires='>=3.9',
     install_requires=install_requires,
     extras_require={'test': tests_require},
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['grokcore'],
     include_package_data=True,
     zip_safe=False,
     classifiers=[
