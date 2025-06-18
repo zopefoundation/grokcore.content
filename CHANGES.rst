@@ -1,7 +1,13 @@
 Changes
 =======
 
-4.2 (unreleased)
+5.0 (unreleased)
+----------------
+
+- Replace ``pkg_resources`` namespace with PEP 420 native namespace.
+
+
+4.2 (2025-05-27)
 ----------------
 
 - Add support for Python 3.12, 3.13.
