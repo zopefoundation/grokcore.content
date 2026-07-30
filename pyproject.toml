@@ -7,7 +7,6 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-
 [project]
 name = "grokcore.content"
 version = "5.1.dev0"
@@ -36,7 +35,6 @@ maintainers = [
     {name = "Plone Foundation and contributors",email = "zope-dev@zope.dev"},
 ]
 dependencies = [
-    "setuptools",
     "persistent",
     "grokcore.component >= 2.1",
     "zope.annotation",
@@ -81,3 +79,7 @@ directory = "parts/htmlcov"
 [tool.setuptools.dynamic]
 readme = {file = ["README.rst", "CHANGES.rst"]}
 
+
+[tool.zest-releaser]
+create-wheel = false
+upload-pypi = false

@@ -22,3 +22,6 @@ additional-config = [
     "per-file-ignores =",
     "    src/grokcore/content/__init__.py: F401",
     ]
+
+[pypi]
+trusted-publishing = true
